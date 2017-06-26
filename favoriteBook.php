@@ -257,7 +257,7 @@ include("conection.php");
             // $bookID = $row["book_id"];
             // $userID = $_SESSION["UserId"];
             //book_picture
-            echo "<a href='file/". $row["book_file"] ."' target='_blank'>" .
+            echo "<a href='../pdfTest/pdf.js/web/viewer.php?bookname=\"". $row["book_file"] ."\"' target='_blank' >" .
              "<img src= 'images/" . $row["book_picture"] . "'/>" . "</a>";
 
              //echo "<input type='hidden' class='findStatusYes' value=''" . $row2["status"] . "'>";
