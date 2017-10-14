@@ -16,7 +16,7 @@
       </li>
       <li><a href='logout.php'>Log out</a></li>
     </ul>
-  </div>  <!-- End of banner -->
+  </div> <!-- End of banner -->
 
   <!-- Wrapper for slides -->
   <div id="myCarousel" class="carousel slide" data-ride="carousel">

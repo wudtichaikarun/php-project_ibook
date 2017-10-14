@@ -12,6 +12,10 @@ $userID = $_SESSION["UserId"];
   <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+  <script src="css/bootstrap.min.js"></script>
+  <script src="dist/sweetalert.min.js"></script>
+  <script src="js/jquery.blockUI.js"></script>
+  <script src="js/jquery-3.2.0.min.js"></script>
   <script>
     $(document).ready(function () {
       // Delete book
@@ -60,14 +64,9 @@ $userID = $_SESSION["UserId"];
         var user_id = $(this).parent().find('.dataUser').attr('dataUser');
         //read from favorite book by fech array
         var readFavStatus = $(this).parent().find('.readStatus').attr('readStatus');
-        /* console.log(item_bookID_Yes);
-        console.log(item_bookID_no);
-        console.log(data_addFav);
-        console.log(data_delFav);
-        console.log(readFavStatus);
-        console.log(user_id ); */
+        // console.log(item_bookID_Yes, item_bookID_no, data_addFav, data_delFav, readFavStatus, user_id);
         if (readFavStatus == 'Yes') {
-          //delete favorite book from data base
+          // Delete favorite book from data base
           var jqxhr = $.ajax({
             url: "delFavorite.php",
             dataType:'html',
@@ -149,6 +148,7 @@ $userID = $_SESSION["UserId"];
         }
       } );
     } ); // End of document ready
+    // Set word
     function setword(x){
       $("#word").val(x);
       $("#hint").html('');
@@ -157,15 +157,16 @@ $userID = $_SESSION["UserId"];
 </head>
 <body>
   <?php
-  // Condition check Userlevel
+  // Condition check userlevel
   if (!isset($_SESSION["UserLevel"]) || $_SESSION["UserLevel"] != 'A') {
     echo "<script>";
     echo "alert('Error Please Log in');";
     echo "window.location = 'iBookLogin.php';";
     echo "</script>";
   } else {
-    //1. conection:
+    // Conection database
     include("conection.php");
+    // Nav menu
     include_once('./inc/navAdmin.inc.php')
     ?>
     <div class="container">
@@ -173,92 +174,13 @@ $userID = $_SESSION["UserId"];
         <?php
         $query = "SELECT * FROM books";
         $result = mysqli_query($con, $query);
-        while($row = mysqli_fetch_array($result)) {
-          $bookID = $row["book_id"];
-          $actADD = "add";
-          $actDEL = "del";
-          $statusYES = "Yes";
-          echo "<div class='col-md-2'>";
-            // Book_picture
-            echo "<a href='../pdfTest/pdf.js/web/viewer.php?bookname=\"". $row["book_file"] ."\"' target='_blank' >" .
-              "<img src= 'images/" . $row["book_picture"] . "'/>" . "</a>";
-            // Book_id
-            echo "<p style='display:none'>" . "ID:" . $row["book_id"] . "</p>";
-            // Book_name
-            echo "<p class='name-books'>". $row["book_name"] . "</p>";
-            // Favorite
-            $query2 = "SELECT * FROM favorite WHERE fav_bookID='$bookID' AND user_id='$userID'";
-            $result2 = mysqli_query($con, $query2);
-            $row2 = mysqli_fetch_array($result2);
-            echo "<label class='switch'>";
-              echo "<p class='favorite-text'>" . "favorite" .  "</p>";
-              //read status from favorite data base
-              echo "<p class='readStatus' readStatus='" . $row2["status"] . "'></p>";
-              // Act del favorite
-              //echo "<p  class='dataAddFav' style='display:none' dataAddFav='" . $actADD . "'></p>";
-              // Act del favorite
-              //echo "<p  class='dataDelFav' style='display:none' dataDelFav='" . $actDEL . "'></p>";
-              // User id
-              echo "<p  class='dataUser' style='display:none' dataUser='" . $userID . "'></p>";
-              // Status sent to data base
-              //echo "<p  class='dataStatusYes' style='display:none' dataStatusYes='" . $statusYES . "'></p>";
-              echo "<input type='checkbox' name='checkboxFav' class='favorit-icon'>";
-              // Book id
-              if ($row2["status"]  == 'Yes') {
-                echo "<div class='sliderFav 'title='Click for Delete favorite book' data-bookID='" . $bookID . "' chkRedfavorite='" . $row2["status"] . "'></div>";
-              } else {
-                echo "<div class='slider' title='Click for Add favorite book' data-bookID='" . $bookID . "' chkRedfavorite='" . $row2["status"] . "'></div>";
-              }
-            echo "</label>";
-            // Delete book
-            echo "<label class='switch2'>";
-              echo "<p class='favorite-text'>" . "Delete" .  "</p>";
-              echo "<input type='checkbox' class='delete-icon'>";
-              echo "<a href= 'delBook.php?bookId=" . $bookID . "' class='a_del_book' style='display:none'>dell</a>";
-              echo "<div class='slider-delete'></div>";
-            echo "</label>";
-          echo "</div>"; // End of col-md-2
-        }
+        include_once('./inc/whileLoop.inc.php');
       echo "</div>"; // End of row
     echo "</div>"; // End of container
-      mysqli_close($con);
+    mysqli_close($con);
   } // End of else condition check userlevel
+  // Footer
+  include_once('./inc/footer.inc.php');
   ?>
-
-  <!-- FOOTER -->
-  <div class="footerIbook">
-    <ul class="footer-book">
-      <li>หมวดหนังสือ</li>
-      <li>หนังสือแนะนำ</li>
-      <li>หนังสือมาใหม่</li>
-      <li>หนังสือแจกฟรี</li>
-      <li>หนังสือทั้งหมด</li>
-    </ul>
-    <ul class="footer-magazeen">
-      <li>หมวดนิตยสาร</li>
-      <li>นิตยสารแนะนำ</li>
-      <li>นิตยสารมาใหม่</li>
-      <li>นิตยสารแจกฟรี</li>
-      <li>นิตยสารทั้งหมด</li>
-    </ul>
-    <ul class="footer-you">
-      <li>เกี่ยวกับผู้อ่าน</li>
-      <li>เข้าสู่ระบบ</li>
-      <li>สมัครสมาชิค</li>
-      <li>ลืมรหัสผ่าน</li>
-      <li>ปัญหาการใช้งาน</li>
-    </ul>
-    <ul class="footer-us">
-      <li>เกี่ยวกับเรา</li>
-      <li>เกี่ยวกับเรา</li>
-      <li>ข่าวและกิจกรรม</li>
-      <li>คู่มือการใช้</li>
-      <li>ติดต่อเรา</li>
-    </ul>
-  </div>  <!-- End of FOOTER -->
-  <script src="css/bootstrap.min.js"></script>
-  <script src="dist/sweetalert.min.js"></script>
-  <script src="js/jquery.blockUI.js"></script>
-  <script src="js/jquery-3.2.0.min.js"></script>
 </body>
 </html>
