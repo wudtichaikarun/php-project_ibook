@@ -18,13 +18,6 @@ $userLEVEL = $_SESSION["UserLevel"];
   <script src="dist/sweetalert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
   <script src="js/jquery-crud.js" type="text/javascript"></script>
-<script>
-  // Set word
-  function setword (x) {
-    $("#word").val(x);
-    $("#hint").html('');
-  }
-</script>
 </head>
 <body>
   <?php

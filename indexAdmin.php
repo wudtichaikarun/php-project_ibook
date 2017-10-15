@@ -17,12 +17,6 @@ $userID = $_SESSION["UserId"];
   <script src="dist/sweetalert.min.js"></script>
   <script src="js/jquery.blockUI.js"></script>
   <script src="js/jquery-crud.js" type="text/javascript"></script>
-  <script>
-    function setword(x){
-      $("#word").val(x);
-      $("#hint").html('');
-    }
-  </script>
 </head>
 <body>
   <?php
