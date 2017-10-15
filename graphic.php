@@ -33,10 +33,8 @@ $userLEVEL = $_SESSION["UserLevel"];
     include("conection.php");
     // Nav menu
     include_once('./inc/navOtherPage.inc.php');
-    ?>
-    <div class="container">
-      <div class="row">
-      <?php
+    echo"<div class='container'>";
+      echo"<div class='row'>";
         $query = "SELECT * FROM books WHERE categorys_id='6'";
         $result = mysqli_query($con, $query);
         // Loop create object
