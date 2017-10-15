@@ -52,10 +52,8 @@ $userLEVEL = $_SESSION["UserLevel"];
           } else if (userLEVEL == 'U') {
             $('#chkUserlevel').attr('href', 'index.php');
           } else {
-            echo "<script>";
-            echo "alert('Error Please Log in');";
-            echo "window.location = 'iBookLogin.php';";
-            echo "</script>";
+            alert('Error Please Log in');
+            window.location = 'iBookLogin.php';
           }
         } );
         //hide manu banner
