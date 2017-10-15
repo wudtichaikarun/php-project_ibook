@@ -16,10 +16,8 @@
     webshims.setOptions('forms-ext', {
     replaceUI: 'auto',
     types: 'number'
-    });
-
+    } );
     webshims.polyfill('forms forms-ext');
-
     $(document).ready(function () {
       document.querySelector("html").classList.add('js');
       var fileInput = document.querySelector( ".input-file" ),
@@ -58,7 +56,6 @@
       fileInputPic.addEventListener( "change", function (event) {
         the_return_pic.innerHTML = this.value;
       } );
-
     } );
   </script>
 </head>
