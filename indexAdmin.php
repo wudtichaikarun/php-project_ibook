@@ -27,7 +27,7 @@ $userID = $_SESSION["UserId"];
     echo "window.location = 'iBookLogin.php';";
     echo "</script>";
   } else {
-    // Conection database
+    // Connect database
     include("conection.php");
     // Nav menu
     include_once('./inc/navAdmin.inc.php')
@@ -37,6 +37,7 @@ $userID = $_SESSION["UserId"];
         <?php
         $query = "SELECT * FROM books";
         $result = mysqli_query($con, $query);
+        // Loop create objects
         include_once('./inc/whileLoop.inc.php');
       echo "</div>"; // End of row
     echo "</div>"; // End of container
