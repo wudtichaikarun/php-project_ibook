@@ -28,20 +28,29 @@ $userID = $_SESSION["UserId"];
     echo "</script>";
   } else {
     // Connect database
-    include("conection.php");
+    include("./inc/connectionSecure.inc.php");
     // Nav menu
     include_once('./inc/navAdmin.inc.php')
     ?>
     <div class="container">
       <div class="row">
         <?php
-        $query = "SELECT * FROM books";
-        $result = mysqli_query($con, $query);
+        function db_query ($query) {
+          // Connect to the database
+          $connection = db_connect(); 
+          // Query the database
+          $result = mysqli_query($connection,$query);    
+          return $result;
+        }
+        $result = db_query("SELECT * FROM books");
+        // $query = "SELECT * FROM books";
+        // $result = mysqli_query($con, $query);
         // Loop create objects
         include_once('./inc/whileLoop.inc.php');
       echo "</div>"; // End of row
     echo "</div>"; // End of container
-    mysqli_close($con);
+    // Close connection
+    mysqli_close(db_connect());
   } // End of else condition check userlevel
   // Footer
   include_once('./inc/footer.inc.php');

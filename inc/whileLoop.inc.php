@@ -14,7 +14,8 @@ while($row = mysqli_fetch_array($result)) {
     echo "<p class='name-books'>". $row["book_name"] . "</p>";
     // Favorite
     $query2 = "SELECT * FROM favorite WHERE fav_bookID='$bookID' AND user_id='$userID'";
-    $result2 = mysqli_query($con, $query2);
+    // $result2 = mysqli_query($connection, $query2);
+    $result2= db_query($query2);
     $row2 = mysqli_fetch_array($result2);
     echo "<label class='switch'>";
       echo "<p class='favorite-text'>" . "favorite" .  "</p>";
