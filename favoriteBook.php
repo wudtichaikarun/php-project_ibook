@@ -152,12 +152,11 @@ if (!isset($_SESSION["UserLevel"])) {
             echo "<input type='checkbox' class='favorit-icon'>";
             //book id
             echo "<div class='sliderFav'title='Click for Delete favorite book' data-bookID='" .$bookID . "'></div>";
-            // echo "<br />";
           echo "</label>";
         echo "</div>";
       }
-    echo "</div>";
-  echo "</div>";
+    echo "</div>"; // div.row end
+  echo "</div>"; // div.container end
   mysqli_close($con);
 }
   // Footer
