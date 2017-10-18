@@ -5,8 +5,8 @@
 	$sql = "SELECT * FROM ibookuser WHERE user_name = '$UserName'";
 	$result = mysqli_query($con, $sql);
 	if (mysqli_num_rows($result) != 0) {
-		echo "true,<span style='color:green'>ยินดีต้อนรับ $UserName </span>";
+		echo "true,<span style='color:green'>ยินดีต้อนรับคุณ $UserName </span>";
 	} else {
-		echo "false,<span style='color:red'>username ไม่ถูกต้อง</span>";
+		echo "false,<span style='color:red'>ชื่อผู้ใช้งาน ไม่ถูกต้อง</span>";
 	}
 ?>

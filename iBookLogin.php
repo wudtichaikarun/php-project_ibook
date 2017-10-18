@@ -40,13 +40,13 @@
 <body>
   <div class="container">
     <img src="images/user1.png">
-    <form action="iBookChkLogin.php" method="post">
+    <form>
       <div class="form-input">
-        <input type="text"  id="username" name="username" placeholder="Username" >
+        <input type="text"  id="username" name="username" placeholder="ชื่อ..." >
         <p id="chk_username"></p>
       </div>
       <div class="form-input">
-        <input type="password" name="password" placeholder="Password">
+        <input type="password" name="password" placeholder="รหัส...">
         <p id="login_chk_password"></p>
       </div>
       <input type="submit" name="submit" value="LOGIN" class="btn-login"><br>
