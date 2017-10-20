@@ -1,5 +1,7 @@
 <?php session_start();
 $userID = $_SESSION["UserId"];
+echo "userName:".$_SESSION['UserName']." id:".$_SESSION["UserId"]." level:".$_SESSION["UserLevel"] ;
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +23,7 @@ $userID = $_SESSION["UserId"];
 <body>
   <?php
   // Condition check userlevel
-  if (!isset($_SESSION["UserLevel"]) || $_SESSION["UserLevel"] != 'A') {
+  if (!isset($_SESSION["UserName"]) || $_SESSION["UserLevel"] != 'A') {
     echo "<script>";
     echo "alert('Error Please Log in');";
     echo "window.location = 'iBookLogin.php';";

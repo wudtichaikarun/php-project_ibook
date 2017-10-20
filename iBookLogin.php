@@ -25,7 +25,7 @@
       } )
       //Fail
       .fail(function (xhr, status, exception) {
-        alert(status);
+        alert(status+" ติดต่อฐานข้อมูลไม่ได้");
       } );
       if (flag == 'false') {
         return false;
@@ -40,7 +40,7 @@
 <body>
   <div class="container">
     <img src="images/user1.png">
-    <form>
+    <form action="iBookChkLogin.php" method="post" >
       <div class="form-input">
         <input type="text"  id="username" name="username" placeholder="ชื่อ..." >
         <p id="chk_username"></p>

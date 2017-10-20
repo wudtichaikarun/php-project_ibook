@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
   <script src="js/jquery-3.2.0.min.js"></script>
+  <!-- Check form script -->
   <script src="js/checkForm.js" type="text/javascript"></script>
 </head>
 <body>
