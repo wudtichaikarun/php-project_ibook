@@ -16,8 +16,9 @@
   $Picture  = $_FILES["picture"]["name"];//chang variable
 
   // Query
-  $query= "INSERT INTO ibookuser(user_name, user_password, user_level, user_picture, user_email) VALUES('$Username',
-  '$Password', '$Userlevel', '$Picture', '$Email')";
+  $query= "INSERT INTO 
+    ibookuser(user_name, user_password, user_level, user_picture, user_email) 
+    VALUES('$Username','$Password', '$Userlevel', '$Picture', '$Email')";
   
   // Call query function
   $result = db_query($query);
