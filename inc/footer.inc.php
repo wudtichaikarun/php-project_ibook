@@ -1,5 +1,4 @@
- <!-- FOOTER  -->
-<div class="footerIbook">
+<footer class="footerIbook">
   <ul class="footer-book">
     <li>หมวดหนังสือ</li>
     <li>หนังสือแนะนำ</li>
@@ -28,4 +27,4 @@
     <li>คู่มือการใช้</li>
     <li>ติดต่อเรา</li>
   </ul>
-</div>  <!-- End of FOOTER -->
+</footer>
