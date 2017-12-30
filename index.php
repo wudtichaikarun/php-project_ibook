@@ -139,12 +139,12 @@ $userLEVEL = $_SESSION["UserLevel"];
   <?php
   echo "<input type='hidden' id='userLEVEL' value='$userLEVEL'>";
   //condition check Userlevel
-  if(!isset($_SESSION["UserLevel"]) || $_SESSION["UserLevel"] != 'U'){
-    echo "<script>";
-    echo "alert('Error Please Log in');";
-    echo "window.location = 'iBookLogin.php';";
-    echo "</script>";
-  } else {
+  // if(!isset($_SESSION["UserLevel"]) || $_SESSION["UserLevel"] != 'U'){
+  //   echo "<script>";
+  //   echo "alert('Error Please Log in');";
+  //   echo "window.location = 'iBookLogin.php';";
+  //   echo "</script>";
+  // } else {
     //1. conection:
     include("conection.php");
     // Nav menu
@@ -160,7 +160,7 @@ $userLEVEL = $_SESSION["UserLevel"];
       echo "</div>"; // End of row
     echo "</div>"; // End of container
     mysqli_close($con);
-  } // End of else condition check userlevel
+  // } // End of else condition check userlevel
   // Footer
   include_once('./inc/footer.inc.php');
   ?>
