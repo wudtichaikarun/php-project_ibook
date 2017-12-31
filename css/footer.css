@@ -1,0 +1,23 @@
+.footer-box > .footer-content {
+  background-color: #292b2c;	
+}
+
+.footer-content > div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: gray;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-auto-rows: 150px;
+}
+
+.footer-content > ul:nth-child(1n) {
+  background-color: aliceblue;
+}
+.footer-content > ul:nth-child(2n) {
+  background-color: darkcyan;
+}

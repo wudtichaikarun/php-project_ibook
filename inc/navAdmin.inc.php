@@ -5,14 +5,13 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+    <a class="navbar-brand" href="#">Ibooks</a>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
 
         <li class="nav-item active">
-          <!-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> -->
-          <a class="nav-link" href='indexAdmin.php'>หน้าแรก</a>
+          <a class="nav-link" href='indexAdmin.php'>หน้าแรก<span class="sr-only">(current)</a>
         </li>
 
         <li class="nav-item">
@@ -66,7 +65,7 @@
       <span class="sr-only">Next</span>
     </a>
 
-  </figure> <!-- End of wrapper for slides -->
+  </figure>
   
   <!-- sub menu-->
   <nav class="sub-manu">
@@ -104,4 +103,4 @@
       </li>
   
     </ul>
-</nav>
+  </nav>
