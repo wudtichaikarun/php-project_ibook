@@ -15,6 +15,7 @@ $userID = $_SESSION["UserId"];
   <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
   <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
   <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/content.css">
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
@@ -33,29 +34,36 @@ $userID = $_SESSION["UserId"];
   } else {
     // Connect database
     include("./inc/connectionSecure.inc.php");
+
+    function db_query ($query) {
+      // Connect to the database
+      $connection = db_connect(); 
+      // Query the database
+      $result = mysqli_query($connection,$query);    
+      return $result;
+    }
+
     // Nav menu
     include_once('./inc/navAdmin.inc.php')
     ?>
-    <div class="container">
-      <div class="row">
+
+    <article class="article-box">
         <?php
-        function db_query ($query) {
-          // Connect to the database
-          $connection = db_connect(); 
-          // Query the database
-          $result = mysqli_query($connection,$query);    
-          return $result;
-        }
+        
         $result = db_query("SELECT * FROM books");
         include_once('./inc/whileLoop.inc.php');
-      echo "</div>"; // End of row
-    echo "</div>"; // End of container
+    echo "</article>"; // End of container
+
     // Close connection
     mysqli_close(db_connect());
+
   } // End of else condition check userlevel
+
   // Footer
   include_once('./inc/footer.inc.php');
+
   ?>
+
   <!-- Modal -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">

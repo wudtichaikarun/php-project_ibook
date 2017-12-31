@@ -34,8 +34,8 @@
       </ul>
 
       <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <input class="form-control mr-sm-2" type="text" placeholder="ชื่อหนังสือ">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">ค้นหา</button>
       </form>
     </div>
     
@@ -69,37 +69,39 @@
   </figure> <!-- End of wrapper for slides -->
   
   <!-- sub menu-->
-  <ul class="category_menu">
-    <li>
-       <a href='technology.php'>เทคโนโลยี</a>
-    </li>
-
-    <li>
-      <a href='science.php'>วิทยาศาสตร์</a>
-    </li>
-
-    <li>
-      <a href='howTo.php'>วิธีการ</a>
-    </li>
-
-    <li>
-      <a href='math.php'>คณิตศาสตร์</a>
-    </li>
-
-    <li>
-      <a href='history.php'>ประวิติศาสตร์</a>
-    </li>
-
-    <li>
-      <a href='graphic.php'>ออกแบบ</a>
-    </li>
-
-    <li>
-      <a href='language.php'>ภาษา</a>
-    </li>
-
-    <li>
-      <a href='other.php'>อื่นๆ</a>
-    </li>
-
-  </ul>
+  <nav class="sub-manu">
+    <ul class="box-manu">
+      <li>
+         <a href='technology.php'>เทคโนโลยี</a>
+      </li>
+  
+      <li>
+        <a href='science.php'>วิทยาศาสตร์</a>
+      </li>
+  
+      <li>
+        <a href='howTo.php'>วิธีการ</a>
+      </li>
+  
+      <li>
+        <a href='math.php'>คณิตศาสตร์</a>
+      </li>
+  
+      <li>
+        <a href='history.php'>ประวิติศาสตร์</a>
+      </li>
+  
+      <li>
+        <a href='graphic.php'>ออกแบบ</a>
+      </li>
+  
+      <li>
+        <a href='language.php'>ภาษา</a>
+      </li>
+  
+      <li>
+        <a href='other.php'>อื่นๆ</a>
+      </li>
+  
+    </ul>
+</nav>
