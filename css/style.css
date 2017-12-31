@@ -1,0 +1,292 @@
+body
+{
+  margin: 0 auto;
+  background-image: url("../images/bgOpacity2.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+h1
+{
+  color: white;
+}
+
+.container
+{
+  width: 500px;
+  height: 400px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 9px;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+
+.containerRegister
+{
+  width: 500px;
+  height: 700px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 9px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.containerAddNewBook
+{
+  width: 500px;
+  height: 680px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 9px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+
+.container img
+{
+  width: 120px;
+  height: 120px;
+  margin-top: -60px;
+  margin-bottom: 30px;
+}
+
+.containerRegister img
+{
+  width: 120px;
+  height: 120px;
+  margin-top: -70px;
+  margin-bottom: 30px;
+}
+
+.containerAddNewBook img
+{
+  width: 70px;
+  height: 70px;
+  margin-top: -60px;
+  margin-bottom: 0px;
+}
+
+input[type="text"],input[type="password"]
+{
+  height: 45px;
+  width: 300px;
+  font-size: 18px;
+  margin-bottom: 5px;
+  background-color: #fff;
+  padding-left: 40px;
+  border-radius: 4px;
+  border: none;
+}
+input[type="file"]{
+  background-color: black;
+  width: 80px;
+  height: 30px;
+  border-radius: 10px;
+}
+#upfile1{
+  width: 50px;
+  height: 50px;
+  margin: 0;
+}
+.form-input::before
+{
+  content: "\f007";
+  color: #737373;
+  position: absolute;
+  font-family: "FontAwesome";
+  padding-left: 7px;
+  padding-top: 5px;
+  font-size: 35px;
+}
+.form-input:nth-child(2)::before
+{
+  content: "\f023";
+}
+
+.form-input:nth-child(3)::before
+{
+  content: "\f023";
+}
+
+.form-input:nth-child(4)::before
+{
+  content: "\f199";
+}
+
+/*.form-input-update::before
+{
+  content: "\f02d";
+  color: #737373;
+  position: absolute;
+  font-family: "FontAwesome";
+  padding-left: 7px;
+  padding-top: 5px;
+  font-size: 35px;
+}*/
+#addNewBookHeader{
+  color: white;
+  font-weight: bold;
+}
+.form-row{
+    height: 52px;
+    margin: 0;
+    text-align: left;
+    padding-left:46px;
+    margin-bottom: 5px;
+}
+div.form-row.bookfile{
+    height: 80px;
+}
+.form-row label{
+    color: white;
+}
+.form-row select{
+  border-radius: 0;
+  border: 0;
+  width: 195px;
+  height: 43px;
+  /*padding: 3px 1px;*/
+  font-size: 1.8rem;
+}
+
+.form-row input{
+  width: 225px;
+  height: 43px;
+  padding: 3px 1px;
+  padding-left: 10px;
+  margin: 0;
+  border-radius: 0;
+}
+
+input.currency {
+  width:90px;
+  height: 43px;
+  border-radius: 0;
+  padding-right: 15px;
+  text-align: right;
+  border: 0;
+  font-size: 2rem;
+}
+.input-file-container {
+  margin: auto;
+  position: relative;
+  width: 225px;
+  text-align: center;
+  margin-bottom: 20px;
+
+}
+
+.js .input-file-trigger ,
+.js .input-file-trigger-pic{
+  display: block;
+  padding: 14px 45px;
+  background: #39D2B4;
+  color: #fff;
+  font-size: 1em;
+  transition: all .4s;
+  cursor: pointer;
+}
+/*hide choose file*/
+.js .input-file ,
+.js .input-file-pic{
+  position: absolute;
+  top: 0; left: 0;
+  width: 225px;
+  opacity: 0;
+  padding: 14px 0;
+  cursor: pointer;
+}
+.js .input-file:hover + .input-file-trigger,
+.js .input-file:focus + .input-file-trigger,
+.js .input-file:hover + .input-file-trigger-pic,
+.js .input-file:focus + .input-file-trigger-pic,
+.js .input-file-trigger:hover,
+.js .input-file-trigger:focus {
+  background: #34495E;
+  color: #39D2B4;
+}
+
+.file-return {
+  margin: 0;
+}
+.file-return:not(:empty) {
+  margin: 1em 0;
+}
+.js .file-return ,
+.js .file-return-pic {
+  font-style: italic;
+  font-size: .9em;
+  font-weight:normal;
+}
+.js .file-return:not(:empty):before{
+  content: "Selected file: ";
+  font-style: normal;
+  font-weight: normal;
+}
+.js .file-return-pic:not(:empty):before{
+  content: "Selected Picture: ";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.btn-login
+{
+  margin-top: 20px;
+  padding: 15px 25px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 17px;
+  border-radius: 0px;
+  border: none;
+  background-color: #39D2B4;
+  margin-bottom: 20px;
+}
+.btn-login:hover{
+  transition: all .5s;
+  background-color: #34495E;
+  color: #39D2B4;
+}
+
+a
+{
+  color: #fff;
+  font-size: 17px;
+  font-family:  Tahoma;
+}
+#chk_username, #chk_password,
+#chk_email, #chk_cfm_password,
+#chk_file_picture{
+color: white;
+margin-bottom: 10px;
+font-size: 1rem;
+padding-left: 80px;
+}
+
+p
+{
+  color:white;
+  font-size: 1.2rem;
+  text-align: left;
+  padding-left: 80px;
+  margin: 0px;
+  margin-bottom: 10px;
+}
+
+.userlevel{
+  margin: 0;
+  padding-left: 70px;
+  margin-right: 50%;
+  margin-bottom: 30px;
+  text-align: left;
+  color: white;
+  /*background-color: red;*/
+  height: 30px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+#homeLink{
+  color: white;
+}
