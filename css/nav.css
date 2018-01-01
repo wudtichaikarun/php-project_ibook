@@ -1,5 +1,53 @@
-.navbar {
-  border-radius: 0 !important;
+@import url('https://fonts.googleapis.com/css?family=Merienda');
+
+body {
+  font-family: 'Merienda', cursive !important;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+
+/* main-block */
+.navbar-box {
+  background: #000;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+/* block-one */
+.navbar-box > .box-logo {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #62debe;
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  padding: 10px;
+}
+
+/* block-two */
+.navbar-box > .box-manu > .parent {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+.navbar-box > .box-manu > .parent a {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1em;
+  display: inline-block;
+}
+.navbar-box > .box-manu > .parent a:hover {
+  background: red;
+}
+
+/* block-three */
+.navbar-box > .box-search {
+  margin-left: auto;
+  align-items: center;
+  padding-right: 10px;
 }
 
 figure {
@@ -25,17 +73,18 @@ figure {
 }
 
 .box-manu > li > a {
-  color: gray; 
   font-size: 0.9rem;
   text-decoration: none;
-}
-
-.box-manu > li:hover {
-  background-color: black;
+  color: gray;
 }
 
 .box-manu > li > a:hover {
+  background-color: black;
   color: white;
+}
+
+.box-manu > li:hover {
+  background: black;
 }
 
 .box-manu {
@@ -44,36 +93,18 @@ figure {
   grid-auto-rows: 40px;
 }
 
-.logo {
- grid-area: logo;
-}
-
-.home {
- grid-area: home;
-}
-
-.add {
-  grid-area: add;
-}
-
-.favorit {
-  grid-area:  favorite;
-}
-
-.edit {
-  grid-area:  edit;
-}
-
-.search {
- grid-area: search;
- grid-column: 9 / search;
-}
-
-.logout {
- grid-area: logout;
-}
-
-.logo-box {
-  width: 100px;
-  height: 100px;
+@media all and (max-width: 900px) {
+  .navbar-box {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .navbar-box > .box-manu {
+    order: 1;
+    background: #333;
+    width: 100%;
+  }
+  .navbar-box > .box-search {
+    padding-bottom: 5px;
+    padding-right: 0;
+  }
 }

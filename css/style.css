@@ -1,9 +1,7 @@
 body
 {
   margin: 0 auto;
-  background-image: url("../images/bgOpacity2.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
+  background: gray;
 }
 
 h1
@@ -43,7 +41,6 @@ h1
   margin: 0 auto;
   margin-top: 100px;
 }
-
 
 .container img
 {
@@ -96,7 +93,7 @@ input[type="file"]{
   content: "\f007";
   color: #737373;
   position: absolute;
-  font-family: "FontAwesome";
+  /* font-family: "FontAwesome"; */
   padding-left: 7px;
   padding-top: 5px;
   font-size: 35px;
@@ -254,7 +251,7 @@ a
 {
   color: #fff;
   font-size: 17px;
-  font-family:  Tahoma;
+  /* font-family:  Tahoma; */
 }
 #chk_username, #chk_password,
 #chk_email, #chk_cfm_password,

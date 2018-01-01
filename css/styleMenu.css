@@ -445,13 +445,6 @@ p.favorite-text{
   /*color: darkgrey;*/
 }
 /*Name book font*/
-p.name-books{
-  font-style:oblique;
-  font-weight: bold;
-  padding-bottom: 5px;
-  color: darkgrey;
-
-}
 
 p.font_header{
   margin-top: 30px;

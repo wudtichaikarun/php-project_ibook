@@ -111,3 +111,51 @@
 </li>
 
 </ul>
+
+
+  <!-- Banner main-block-->
+  <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+
+    <!-- block-one -->
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- block-two -->
+    <a class="navbar-brand" href="#">Ibooks</a>
+
+    <!-- block-three -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item active">
+          <a class="nav-link" href='indexAdmin.php'>หน้าแรก<span class="sr-only">(current)</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link"  data-toggle="modal" data-target="#myModal">เพิ่มหนังสือ</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">หนังสือเล่มโปรด</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">แก้ไขข้อมูลหนังสือ</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">ออกจากระบบ</a>
+        </li>
+
+      </ul>
+
+    </div>
+
+    <!-- block-four -->
+    <form class="input-group search-box">
+      <input class="form-control" type="text" placeholder="ชื่อหนังสือ">
+      <span class="input-group-addon" id="basic-addon2">ค้นหา</span>
+    </form>
+
+  </nav> <!-- End of banner -->

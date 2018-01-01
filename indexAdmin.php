@@ -19,20 +19,17 @@ $userID = $_SESSION["UserId"];
   <link rel="stylesheet" href="css/footer.css"> 
   
   <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" >
-  <script src="./node_modules/jquery/dist/jquery.slim.min.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script> -->
-  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
 </head>
 <body onresize="myFunction()">
   <?php
   // Condition check userlevel
-  if (!isset($_SESSION["UserName"]) || $_SESSION["UserLevel"] != 'A') {
-    echo "<script>";
-    echo "alert('Error Please Log in');";
-    echo "window.location = 'iBookLogin.php';";
-    echo "</script>";
-  } else {
+  // if (!isset($_SESSION["UserName"]) || $_SESSION["UserLevel"] != 'A') {
+  //   echo "<script>";
+  //   echo "alert('Error Please Log in');";
+  //   echo "window.location = 'iBookLogin.php';";
+  //   echo "</script>";
+  // } else {
     // Connect database
     include("./inc/connectionSecure.inc.php");
 
@@ -58,7 +55,7 @@ $userID = $_SESSION["UserId"];
     // Close connection
     mysqli_close(db_connect());
 
-  } // End of else condition check userlevel
+  // } // End of else condition check userlevel
 
   // Footer
   include_once('./inc/footer.inc.php');
@@ -86,11 +83,14 @@ $userID = $_SESSION["UserId"];
     </div>
   </div>
 
-  <!-- <script src="js/jquery-3.2.0.min.js"></script>
-  <script src="css/bootstrap.min.js"></script> -->
+  <script src="./node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script src="./node_modules/tether/dist/js/tether.min.js"></script>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
   <script src="dist/sweetalert.min.js"></script>
   <script src="js/jquery.blockUI.js"></script>
   <script src="js/jquery-crud.js" type="text/javascript"></script>
+
   <script>
     function myFunction() {
       var w = window.outerWidth;
@@ -102,6 +102,8 @@ $userID = $_SESSION["UserId"];
         $('#carouselExampleControls').show()
       }
     }
+    myFunction()
   </script>
+  
 </body>
 </html>

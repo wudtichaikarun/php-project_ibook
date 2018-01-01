@@ -81,12 +81,19 @@
         <label for="c4"> Category Select. :</label>
         <select id='c4' name="categorys_id">
           <?php
-          // Conection.
-          include("conection.php");
+          include("./inc/connectionSecure.inc.php");
+          // Function query
+          function db_query ($query) {
+            // Connect to the database
+            $connection = db_connect(); 
+            // Query the database
+            $result = mysqli_query($connection,$query);    
+            return $result;
+          }
           // Consultation.
           $query = "SELECT * FROM categorys";
           // Execute the query.
-          $result = mysqli_query($con, $query) or die ("Error in query: $sql" . mysqli_error());
+          $result = db_query($query);
           while($row = mysqli_fetch_array($result)) {
             echo "<option value='". $row["categorys_id"] . "'>". $row["categorys_id"] . "-" . $row["categorys_name"] . "</option>";
           }

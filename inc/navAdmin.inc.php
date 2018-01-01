@@ -1,44 +1,28 @@
-  <!-- Banner -->
-  <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+<nav class="navbar-box">
 
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <!-- block-one  -->
+  <a href="" class="box-logo">ibook</a>
 
-    <a class="navbar-brand" href="#">Ibooks</a>
+  <!-- block-two  -->
+  <div class="box-manu">
+    <ul class="parent">
+      <li class="child"><a href="#">home</a></li>
+      <li class="child"><a href="">create</a></li>
+      <li class="child"><a href="">update</a></li>
+      <li class="child"><a href="">delete</a></li>
+      <li class="child"><a href="">logout</a></li>
+    </ul>
+  </div>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
+  <!-- block-three -->
+  <div class="box-search">
+    <form class="input-group search-box">
+      <input class="form-control" type="text" placeholder="ชื่อหนังสือ">
+      <span class="input-group-addon" id="basic-addon2">ค้นหา</span>
+    </form>
+  </div>
 
-        <li class="nav-item active">
-          <a class="nav-link" href='indexAdmin.php'>หน้าแรก<span class="sr-only">(current)</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link"  data-toggle="modal" data-target="#myModal">เพิ่มหนังสือ</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">หนังสือเล่มโปรด</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">แก้ไขข้อมูลหนังสือ</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">ออกจากระบบ</a>
-        </li>
-
-      </ul>
-
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="ชื่อหนังสือ">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">ค้นหา</button>
-      </form>
-    </div>
-    
-  </nav> <!-- End of banner -->
+</nav>
 
   <!-- Wrapper for slides -->
   <figure id="carouselExampleControls" class="carousel slide" data-ride="carousel">
